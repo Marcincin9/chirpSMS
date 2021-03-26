@@ -15,6 +15,10 @@
     </head>
     <body>
     <div class="container main main-raised">
+    <div class="text-center">
+          <h2> ChirpSMS</h2><br />
+          <p>--- Feel free to send an message. --- </p>
+        </div>
         
             @if (session('success'))
             <div class="alert alert-success">
