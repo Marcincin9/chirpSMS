@@ -19,7 +19,9 @@ Route::get('/', function () {
 });
 
 
+
 Route::get('/', [HomeController::class, 'show']);
 Route::post('/', [HomeController::class, 'storePhoneNumber']);
+Route::post('/custom', [HomeController::class, 'sendCustomMessage']);
 
-Route::post('/custom', [NotificationController::class, 'sendCustomMessage']);
+
