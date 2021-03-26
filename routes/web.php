@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\NotificationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,4 +21,5 @@ Route::get('/', function () {
 
 Route::get('/', [HomeController::class, 'show']);
 Route::post('/', [HomeController::class, 'storePhoneNumber']);
-Route::post('/custom', [HomeController::class, 'sendCustomMessage']);
+
+Route::post('/custom', [NotificationController::class, 'sendCustomMessage']);

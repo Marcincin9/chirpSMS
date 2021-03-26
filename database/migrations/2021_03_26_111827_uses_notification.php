@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUsersPhoneNumberTable extends Migration
+class UsesNotification extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreateUsersPhoneNumberTable extends Migration
      */
     public function up()
     {
-        Schema::create('users_phone_number', function (Blueprint $table) {
+        Schema::create('users_notification', function (Blueprint $table) {
             $table->id();
             $table->string('phone_number');
+            $table->text('body');
             $table->timestamps();
             
         });
@@ -28,6 +29,7 @@ class CreateUsersPhoneNumberTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users_phone_number');
+        Schema::dropIfExists('users_notification');
+    
     }
 }
