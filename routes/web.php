@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('welcome');
 });
+
+
+Route::get('/', [HomeController::class, 'show']);
+Route::post('/', [HomeController::class, 'storePhoneNumber']);
+Route::post('/custom', [HomeController::class, 'sendCustomMessage']);
